@@ -1,0 +1,88 @@
+@import "base";
+@import "layout";
+@import "components";
+@import "other";
+@import "mediaqueries";
+
+@mixin headingPrimaryStyle {
+ font-size: 8rem;
+ font-weight: 600;
+ font-family: 'Josefin sans-serif';
+}
+
+@mixin headingPrimaryStyle {
+    color: $colour-textPrimary;
+    font-size: 8rem;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+   }
+
+@mixin headingSecondaryStyle {
+    color: $colour-textPrimary;
+    font-size: 4rem;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+}
+
+@mixin textStyles() {
+    font-family: "EB Garamond", serif;
+    font-size: 8rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+@mixin descriptionStyle() {
+    font-family: "EB Garamond", serif;
+    font-size: 1.6rem;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: whitesmoke;
+
+}
+
+@mixin btnDesign {
+    padding: 2rem 3rem 2rem 3rem;
+    border: 1px solid $colour-textPrimary;
+    font-size: 1.4rem;
+    font-family: "EB Garamond", serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $colour-textPrimary;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+}
+
+$colour-dark:#262626; //main website colour
+$colour-black: #000;
+$colour-textPrimary: #d3ab55;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    border: 5px solid aliceblue;
+}
+
+%fullSpace {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $colour-dark;
+}

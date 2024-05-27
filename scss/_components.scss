@@ -1,0 +1,386 @@
+$colour-textPrimary: #d3ab55;
+$colour-secondary: #bbb;
+$colour-tertiary: #fff;
+
+@mixin headingPrimaryStyle {
+    color: $colour-textPrimary;
+    font-size: 8rem;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+   }
+
+@mixin headingSecondaryStyle {
+    color: $colour-textPrimary;
+    font-size: 4rem;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+}
+
+@mixin textStyles() {
+    font-family: "EB Garamond", serif;
+    font-size: 8rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+@mixin descriptionStyle() {
+    font-family: "EB Garamond", serif;
+    font-size: 1.6rem;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: whitesmoke;
+
+}
+
+@mixin btnDesign {
+    padding: 2rem 3rem 2rem 3rem;
+    border: 1px solid $colour-textPrimary;
+    font-size: 1.4rem;
+    font-family: "EB Garamond", serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $colour-textPrimary;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+}
+
+.hamburger-menu {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    z-index: 300;
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform .7s;
+
+        &-line {
+            width: 100%;
+            height: .4rem;
+            background-color: $colour-textPrimary;
+            transform-origin: right;
+            transition: all .5s .5s;
+        }
+    }
+}
+
+.book-img {
+    display: block;
+    width: 10rem;
+    margin-left: 17.1rem;
+    color: $colour-textPrimary;
+    border-radius: 50%;
+    border: 1px solid #d3ab55;
+    padding: 0.7rem;
+    transition: all .7s ease-in-out;
+}
+
+
+.heading-primary {
+    @include headingPrimaryStyle();
+    transition: all .7s ease-in-out;
+}
+
+.heading-hover:hover, .heading-hover:active {
+    color: aliceblue;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+
+.heading-welcome {
+    @include textStyles();
+    text-align: center
+}
+
+.heading-secondary {
+    @include headingSecondaryStyle();
+
+}
+
+.main-btn {
+    @include btnDesign();
+    margin-top: 5rem;
+    transition: all 0.3s ease-in;
+}
+
+.main-btn:hover, .main-btn:active {
+background-color: aliceblue;
+text-decoration: underline;
+}
+
+.heading-about {
+    @include textStyles();
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+
+.stars {
+    font-size: 1.6rem;
+    margin-top: 3.2rem;
+    color: $colour-textPrimary;
+}
+
+.about-description {
+    @include descriptionStyle();
+    margin-top: 3.2rem;
+}
+
+.service-card {
+padding: 10rem;
+margin-top: -3.2rem;
+text-align: center;
+
+}
+
+.service-icon {
+    width: 8rem;
+    transition: width .5s ease-out;
+    stroke: $colour-textPrimary;
+
+    &:hover {
+        width: 8.4rem;
+
+    }
+}
+
+.service-heading {
+    @include textStyles();
+    color: aliceblue;
+    font-size: 4rem;
+}
+
+.service-description {
+    margin-top: 2.4rem;
+    @include descriptionStyle();
+}
+
+.service-btn {
+    @include btnDesign();
+    margin-top: 2.4rem;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        background-color: aliceblue;
+        text-decoration: underline;
+
+    }
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay {
+     left: 0;
+    }
+
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba($colour-textPrimary, .7);
+    color: $colour-tertiary;
+    z-index: 10;
+    transition: left .7s ease-in-out;
+    @extend %fullSpace;
+}
+
+.card-overlay-heading {
+    @include textStyles();
+    font-size: 4rem;
+}
+
+.card-overlay-desc {
+    @include descriptionStyle();
+    margin-bottom: 3rem;
+}
+
+.card-overlay-btn {
+    width: 15rem;
+    height: 4rem;
+    color: $colour-textPrimary;
+    background-color: $colour-tertiary;
+    font-family: "EB Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid $colour-textPrimary;
+    border-radius: 3rem;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.card-img {
+    @extend %fullSpace;
+    object-fit: cover;
+    opacity: .5;
+    
+    }
+
+    .testimonial {
+        padding: 9rem;
+        border: 1px solid $colour-textPrimary;
+        background-color: #1d1d1d;
+        margin: 6rem;
+        position: relative;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            background-color: #3d3d3d;
+        }
+
+        &-heading {
+            @include headingSecondaryStyle();
+            font-size: 2.4rem;
+
+        }
+
+            &-description {
+                @include descriptionStyle();
+                font-size: 1.8rem;
+                margin-top: 2.4rem;
+            }
+
+            &-img {
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                transform: translate(25%, 25%);
+                transition: all .7s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    border-radius: 0%;
+                    border: 2px solid $colour-textPrimary;
+                    
+                }
+            }
+        }
+
+        .cta-container {
+            width: 92%;
+            margin: 5rem auto;
+        }
+
+        .cta-heading {
+            @include headingPrimaryStyle();
+            font-size: 6rem;
+        }
+
+        .cta-box {
+            background-color:#3d3d3d;
+            display: flex;
+        
+        }
+
+        .cta-left {
+            flex-basis: 60%;
+            padding: 4rem 6rem;
+        }
+
+
+        .cta-right {
+            flex-basis: 40%;
+            padding: 4rem;
+            background-color: $colour-textPrimary;
+            color: $colour-tertiary;
+        }
+
+        .cta-subheading {
+           @include descriptionStyle();
+           font-size: 2.4rem;
+           font-weight: 500;
+           margin-bottom: 2.4rem;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .input-row .input-group {
+            flex-basis: 45%;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $colour-textPrimary;
+            background-color:#3d3d3d;
+            color: aliceblue;
+            outline: none;
+            padding-bottom: 0.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid $colour-textPrimary;
+            background-color: #3d3d3d;
+            outline: none;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin-bottom: 0.6rem;
+            display: block;
+            color: aliceblue;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-family: "EB Garamond", serif;
+            font-style: italic;
+        }
+
+        button {
+            @include btnDesign();
+            margin-top: 2.4rem;
+            transition: all 0.3s ease-in;
+            
+            &:hover {
+                background-color: aliceblue;
+                text-decoration: underline;
+            }
+        }
+
+        tr td:first-child {
+            padding-right: 2rem;
+        }
+
+        tr td {
+            padding-top: 2rem;
+            @include descriptionStyle();
+            font-size: 1.8rem;
+        }
+
+
+
+
+

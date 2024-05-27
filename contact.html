@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@100;400;500;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>KC Copywriter</title>
+</head>
+<body>
+   <!--NAVBAR SECTION-->
+   <nav class="navbar">
+    <input type="checkbox" id="check" class="checkbox" hidden>
+    <div class="hamburger-menu">
+        <label for="check" class="menu">
+            <div class="menu-line menu-line-1"></div>
+            <div class="menu-line menu-line-2"></div>
+            <div class="menu-line menu-line-3"></div>
+            </label>
+    </div>
+    <div class="navbar-navigation">
+        <div class="navbar-navigation-left">
+            <h1 class="heading-primary nav-heading centre-text heading-hover">KC Copywrites</h1>
+            <p class="about-description nav-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Animi magnam ullam adipisci tenetur veniam voluptates optio, 
+                 incidunt eos quia voluptatum! Porro 
+                 incidunt mollitia quae a veritatis quisquam quidem ducimus temporibus. 
+                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Reprehenderit delectus aspernatur dolores adipisci cupiditate
+                 laboriosam. Blanditiis facilis sapiente rerum autem debitis 
+                 perferendis expedita quas, nam aspernatur fugit, 
+                 doloribus dignissimos repudiandae!
+            </p>
+            <img class="left-img left-img-1" src="./img/img2.png" alt="Feature article example">
+            <img class="left-img left-img-2" src="./img/img1.png" alt="Feature article example">
+            <img class="left-img left-img-3" src="./img/img4.png" alt="Feature article example">
+        </div>
+        <div class="navbar-navigation-right">
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="./index.html" class="nav-list-link">Home</a> 
+                </li>
+                <li class="nav-list-item">
+                    <a href="./about.html" class="nav-list-link">About Me</a> 
+                </li>
+                <li class="nav-list-item">
+                    <a href="./experience.html" class="nav-list-link">Experience</a> 
+                </li>
+                <li class="nav-list-item">
+                    <a href="./services.html" class="nav-list-link">Services</a> 
+                </li>
+                <li class="nav-list-item">
+                    <a href="./contact.html" class="nav-list-link">Contact</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+   </nav>
+
+    <!------------------>
+
+    <!--HEADER SECTION-->
+    <header class="header">
+        <div class="brand">
+                <div class="heading">
+                    <img class="book-img" src="./img/book-image.png" alt="Book Image">
+                    <h1 class="heading-primary hero-banner">KC Copywrites</h1>
+                </div>
+        </div>
+
+        <div class="header-banner">
+            <h1 class="heading-welcome">Contact</h1>
+            <h3 class="heading-secondary">Please get in touch</h3>
+            <button type="button" onClick="document.getElementById('contact-me').scrollIntoView();" class="main-btn">Click</button>
+        </div>
+    </header>
+    <!------------------>
+    <!--CONTACT SECTION-->
+    <section class="contact-section" id="contact-me">
+        <div class="heading-welcome centre-text">Contact Me</div>
+        <h3 class="heading-secondary centre-text">Feel happy to send me a message</h3>
+
+        <div class="cta-container">
+            <div class="cta-box">
+                <div class="cta-left">
+                    <h3 class="cta-subheading">Send your request</h3>
+                    <form action="cta-form">
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="full-name">Full Name<span>*</span></label>
+                                <input type="text" placeholder="John Smith" id="full-name" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email Address<span>*</span></label>
+                                <input type="email" placeholder="myemail@example.com" id="email" required>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="phone">Phone Number </label>
+                                <input type="tel" placeholder="01291 372364" id="phone">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="subject">Subject<span>*</span></label>
+                                <input type="text" placeholder="Your Subject" id="phone" required>
+                            </div>
+                        </div>
+                        <label for="message">Message</label>
+                        <textarea placeholder="Enter text here..." id="message" rows="5"></textarea>
+
+                        <button type="submit" class="form-btn">SEND</button>
+                    </form>
+
+                </div>
+                <div class="cta-right">
+                    <h3 class="cta-subheading">My Contact Information</h3>
+
+                    <table>
+                        <tr>
+                            <td>Email: </td>
+                            <td>KelceyCollinsCW@outlook.com</td>
+                        </tr>
+                        <tr>
+                            <td>Telephone: </td>
+                            <td>+44 (0) 207 555 3939</td>
+                        </tr>
+                        <tr>
+                            <td>Address: </td>
+                            <td>85 Great Portland Street <br> London 
+                                Ground Floor <br> W1W 7LT 
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+       </section>
+
+    <!------------------->
+
+     <!--FOOTER SECTION-->
+     <footer class="footer">
+        <div class="footer-header">
+                <h1 class="heading-primary heading-hover">KC Copywrites</h1>
+            </div>
+        
+
+        <div class="footer-social-media">
+            <ul class="social-media">
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright-desc">
+                &copy; Copyright "KC Copywriter". All Rights Reserved.
+            </p>
+        </div>
+     </footer>
+
+     <!------------------->
+</body>
+</html>
